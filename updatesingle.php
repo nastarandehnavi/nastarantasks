@@ -8,10 +8,10 @@ $row= mysqli_fetch_array($result);
 <form name= "form1" method="post" action="">
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="first_name" name="fname" required value="<?php echo $row['first_name']; ?>">
+      <input type="text" class="form-control" placeholder="first_name" name="first_name" required value="<?php echo $row['first_name']; ?>">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="last_name" name="lname" required value="<?php echo $row['last_name']; ?>" >
+      <input type="text" class="form-control" placeholder="last_name" name="last_name" required value="<?php echo $row['last_name']; ?>" >
     </div>
   </div>
   <br>

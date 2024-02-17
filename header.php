@@ -70,6 +70,9 @@
         <li class="nav-item">
           <a class="nav-link" href="Read.php" style = "color:blue;" >Read Data</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="updatesingle.php" style = "color:blue;" >Updatesingle</a>
+        </li>
 
       </ul>
 

@@ -1,70 +1,72 @@
+
 <?php
 $title = "Exercise 7";
-include 'header.php';
 
-// Include database connection
+
+include 'header.php' ?>
+
+
+
+<?php
 include 'nd.php';
-
-// Check if form is submitted
-if(isset($_POST['submit'])) {
-    // Get form data
-    $id = $_POST['ID'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $city = $_POST['city'];
-
-    // SQL to update record
-    $update_query = "UPDATE customers SET first_name='$first_name', last_name='$last_name', city='$city' WHERE id='$id'";
-    
-    // Perform update
-    if(mysqli_query($conn, $update_query)) {
-        echo "<div class='alert alert-success'>Record updated successfully</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Error updating record: " . mysqli_error($conn) . "</div>";
-    }
-}
-
-// Check if delete button is clicked
-if(isset($_POST['delete'])) {
-    // Get ID from form
-    $id = $_POST['ID'];
-
-    // SQL to delete record
-    $delete_query = "DELETE FROM customers WHERE id='$id'";
-    
-    // Perform deletion
-    if(mysqli_query($conn, $delete_query)) {
-        echo "<div class='alert alert-success'>Record deleted successfully</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Error deleting record: " . mysqli_error($conn) . "</div>";
-    }
-}
-
-// Close database connection
-mysqli_close($conn);
+$a = $_GET['id'];
+$result = mysqli_query($conn,"SELECT * FROM customers WHERE id= '$a'");
+$row= mysqli_fetch_array($result);
 ?>
+<h2> Update your information below: </h2>
+<form name= "form1" method="post" action="">
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="first_name" name="first_name" required value="<?php echo $row['first_name']; ?>">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="last_name" name="last_name" required value="<?php echo $row['last_name']; ?>" >
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="city" name="city" required value="<?php echo $row['city']; ?>">
+    </div>
 
-<h2>Input your information</h2>
-
-<form method="post" action="">
-    <div class="form-group">
-        <label for="ID">ID:</label>
-        <input type="number" class="form-control" id="ID" name="ID" required>
-    </div>
-    <div class="form-group">
-        <label for="first_name">First Name:</label>
-        <input type="text" class="form-control" id="first_name" name="first_name" required>
-    </div>
-    <div class="form-group">
-        <label for="last_name">Last Name:</label>
-        <input type="text" class="form-control" id="last_name" name="last_name" required>
-    </div>
-    <div class="form-group">
-        <label for="city">City:</label>
-        <input type="text" class="form-control" id="city" name="city" required>
-    </div>
-    <button type="submit" class="btn btn-primary" name="submit">Update</button>
-    <button type="submit" class="btn btn-danger" name="delete">Delete</button>
+    
+<br>
+  <div class="row">
+  <div class="col"><button type="submit" class="btn btn-primary" name="submit">Update your Information</button></div>
+  <div class="col"><button type="submit" class="btn btn-primary" name="delete">Delete your Information</button></div>
+</div>
 </form>
+<?php 
+/* 
+The isset() function is used to check if a variable is set and not NULL.
+ In this case, it's checking if the $_POST['submit'] 
+value is set and not NULL. If the form has been submitted, the value of $_POST['submit'] will be set,
+and the code inside the if block will be executed. If the form has not been submitted, 
+the value of $_POST['submit'] will not be set, and the code inside the if block will not be executed.
+*/
+if (isset($_POST['submit'])){
+    
+    $fname = $_POST['first_name'];
+    $lname = $_POST['last_name'];
+    $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name' where id='$a'");
+    if($query){
+        echo "<h2>Your information is updated Successfully</h2>";
+        // if you want to redirect to update page after updating
+    }
+    else { echo "Record Not modified";}
+    }
 
-<?php include 'footer.php'; ?>
+    if (isset($_POST['delete'])){
+        $query = mysqli_query($conn,"DELETE FROM customers where id='$a'");
+        if($query){
+            echo "Record Deleted with id: $a <br>";
+            // if you want to redirect to update page after updating
+            //header("location: update.php");
+        }
+        else { echo "Record Not Deleted";}
+        }
+
+$conn->close();
+
+?>
+  <?  include footer.php ?>

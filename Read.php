@@ -30,7 +30,7 @@
         // Loop through the result set and display data in rows
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
-                    <td><a href='updatesingle.php?Id=$row[Id]' style: 'color: blue;'>$row[Id]</a></td>
+                    <td><a href='updatesingle.php?Id=$row[Id]' style = 'color: black;'>$row[Id]</a></td>
                     <td>{$row['first_name']}</td>
                     <td>{$row['last_name']}</td>
                     <td>{$row['city']}</td>

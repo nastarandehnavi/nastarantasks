@@ -9,8 +9,8 @@ include 'header.php' ?>
 
 <?php
 include 'nd.php';
-$a = $_GET['id'];
-$result = mysqli_query($conn,"SELECT * FROM customers WHERE id= '$a'");
+$a = $_GET['Id'];
+$result = mysqli_query($conn,"SELECT * FROM customers WHERE Id= '$a'");
 $row= mysqli_fetch_array($result);
 ?>
 <h2> Update your information below: </h2>
@@ -48,7 +48,7 @@ if (isset($_POST['submit'])){
     
     $fname = $_POST['first_name'];
     $lname = $_POST['last_name'];
-    $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name' where id='$a'");
+    $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name' where Id='$a'");
     if($query){
         echo "<h2>Your information is updated Successfully</h2>";
         // if you want to redirect to update page after updating
@@ -57,9 +57,9 @@ if (isset($_POST['submit'])){
     }
 
     if (isset($_POST['delete'])){
-        $query = mysqli_query($conn,"DELETE FROM customers where id='$a'");
+        $query = mysqli_query($conn,"DELETE FROM customers where Id='$a'");
         if($query){
-            echo "Record Deleted with id: $a <br>";
+            echo "Record Deleted with Id: $a <br>";
             // if you want to redirect to update page after updating
             //header("location: update.php");
         }

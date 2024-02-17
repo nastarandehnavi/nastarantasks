@@ -65,7 +65,7 @@
         <ul>
 
        <li class="nav-item">
-          <a class="nav-link" href="nd.php" style = "color:blue;" >Create Data</a>
+          <a class="nav-link" href="nd.php"  >Create Data</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="Read.php">Read Data</a>

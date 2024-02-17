@@ -18,7 +18,7 @@
         echo "<table class='table'>
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Id</th>
                         <th>first_name</th>
                         <th>last_name</th>
                         <th>city</th>
@@ -30,7 +30,7 @@
         // Loop through the result set and display data in rows
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
-                   
+                    <td>{$row['Id']}</td>
                     <td>{$row['first_name']}</td>
                     <td>{$row['last_name']}</td>
                     <td>{$row['city']}</td>

@@ -8,7 +8,7 @@ include 'nd.php';
 // Check if form is submitted
 if(isset($_POST['submit'])) {
     // Get form data
-    $id = $_POST['Id'];
+    $id = $_POST['ID'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $city = $_POST['city'];

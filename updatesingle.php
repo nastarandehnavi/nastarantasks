@@ -1,4 +1,14 @@
 <?php
+$title = "updating";
+
+
+include 'header.php' ?>
+
+
+
+
+
+<?php
 include 'nd.php';
 $a = $_GET['id'];
 $result = mysqli_query($conn,"SELECT * FROM customers WHERE id= '$a'");
@@ -60,3 +70,5 @@ if (isset($_POST['submit'])){
 $conn->close();
 
 ?>
+<?
+include 'footer.php' ?>

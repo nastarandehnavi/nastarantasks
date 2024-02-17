@@ -9,13 +9,13 @@ include 'header.php' ?>
 
 
 <?php
-include 'nd.php';
+include 'ex7.php';
 $a = $_GET['id'];
 $result = mysqli_query($conn,"SELECT * FROM customers WHERE id= '$a'");
 $row= mysqli_fetch_array($result);
 ?>
 <h2> Update your information below: </h2>
-<form name= "form1" method="post" action="">
+<form name= "form1" method="post" action="ex7.php">
   <div class="row">
     <div class="col">
       <input type="text" class="form-control" placeholder="first_name" name="first_name" required value="<?php echo $row['first_name']; ?>">

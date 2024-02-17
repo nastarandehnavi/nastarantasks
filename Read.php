@@ -5,8 +5,8 @@
 
 <?php
     
-    <?php
-    include 'db.php';
+    
+    include 'nd.php';
     // SQL query to retrieve data from the 'studentsinfo' table
     $sql = "SELECT * FROM customers";
     
@@ -46,22 +46,6 @@
     // close the connection when done
     $conn->close();
     ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

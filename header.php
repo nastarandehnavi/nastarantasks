@@ -62,16 +62,7 @@
   <div class="row" style="margin-top: 10px; margin-bottom: 10px; margin-right: 5px;">
     <div class="col-sm-3" style="background-color: rgb(200, 218, 242);">
       <h1>This is tasks of: 
-        <ul>
-
-       <li class="nav-item">
-          <a class="nav-link" href="nd.php"  >Create Data</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Read.php">Read Data</a>
-        </li>
-
-      </ul>
+        
 
     </div>
     <div class="col-sm-9">

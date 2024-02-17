@@ -14,7 +14,7 @@ if(isset($_POST['submit'])) {
     $city = $_POST['city'];
 
     // SQL to update record
-    $update_query = "UPDATE studentsinfo SET first_name='$first_name', last_name='$last_name', city='$city' WHERE id='$id'";
+    $update_query = "UPDATE customers SET first_name='$first_name', last_name='$last_name', city='$city' WHERE id='$id'";
     
     // Perform update
     if(mysqli_query($conn, $update_query)) {
@@ -30,7 +30,7 @@ if(isset($_POST['delete'])) {
     $id = $_POST['ID'];
 
     // SQL to delete record
-    $delete_query = "DELETE FROM studentsinfo WHERE id='$id'";
+    $delete_query = "DELETE FROM customers WHERE id='$id'";
     
     // Perform deletion
     if(mysqli_query($conn, $delete_query)) {

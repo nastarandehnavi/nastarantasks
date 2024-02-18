@@ -24,13 +24,13 @@ include 'header.php' ?>
                 <input type="text" class="form-control" id="city" name="city" required>
             </div>
 
-            /div>
+            
             <div class="form-group">
                 <label for="Email">Email:</label>
                 <input type="text" class="form-control" id="Email" name="Email" required>
             </div>
 
-            /div>
+            
             <div class="form-group">
                 <label for="phone_number">phone_number:</label>
                 <input type="text" class="form-control" id="phone_number" name="phone_number" required>

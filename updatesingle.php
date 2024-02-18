@@ -1,6 +1,6 @@
 
 <?php
-$title = "Exercise 7";
+$title = "update";
 
 
 include 'header.php' ?>

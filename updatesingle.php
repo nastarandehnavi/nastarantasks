@@ -46,8 +46,9 @@ the value of $_POST['submit'] will not be set, and the code inside the if block 
 */
 if (isset($_POST['submit'])){
     
-    $fname = $_POST['first_name'];
-    $lname = $_POST['last_name'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $city = $_POST['city'];
     $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name' where Id='$a'");
     if($query){
         echo "<h2>Your information is updated Successfully</h2>";

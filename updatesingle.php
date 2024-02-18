@@ -52,7 +52,7 @@ and the code inside the if block will be executed. If the form has not been subm
 the value of $_POST['submit'] will not be set, and the code inside the if block will not be executed.
 */
 if (isset($_POST['submit'])){
-    
+
     
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])){
     $phone_number = $_POST['phone_number'];
 
 
-    $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name', city='$city', Email='$Email',phone_number='$phone_number',where Id='$a'");
+    $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name', city='$city', Email='$Email',phone_number='$phone_number' where Id='$a'");
     if($query){
         echo "<h2>Your information is updated Successfully</h2>";
         // if you want to redirect to update page after updating

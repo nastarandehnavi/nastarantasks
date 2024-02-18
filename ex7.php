@@ -5,7 +5,7 @@ $title = "Exercise 7";
 include 'header.php' ?>
 
         <h2>Input  your information</h2>
-        
+
          <form method="post" action="process5.php">
             <div class="form-group">
                 <label for="ID">ID:</label>
@@ -30,4 +30,4 @@ include 'header.php' ?>
         </form>
     </div>
  
-    <?php include 'footer.php' ?>
+ <?php include 'footer.php'; ?>

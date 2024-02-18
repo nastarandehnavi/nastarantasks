@@ -56,8 +56,8 @@ if (isset($_POST['submit'])){
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $city = $_POST['city'];
-    $city = $_POST['Email'];
-    $city = $_POST['phone_number'];
+    $Email = $_POST['Email'];
+    $phone_number = $_POST['phone_number'];
 
 
     $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name', city='$city', Email='$Email',phone_number='$phone_number',where Id='$a'");

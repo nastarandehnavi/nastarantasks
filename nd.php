@@ -2,7 +2,7 @@
 $servername = "localhost"; 
 $username = "nastaran23000";     
 $password = "R5OEMKLK";     
-$dbname = "wp_nastaran23000";      
+$dbname = "wp_nastaran2300";      
 
 // Create a database connection
 $conn = new mysqli($servername, $username, $password, $dbname);

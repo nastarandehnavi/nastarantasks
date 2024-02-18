@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
 
     // Define an SQL query to insert data into the 'customers' table
     $sql = "INSERT INTO customers (first_name, last_name, city, Email, phone_number)
-            VALUES ('$first_name', '$last_name', '$city , $Email, $phone_number')";
+            VALUES ('$first_name', '$last_name', '$city , '$Email',' $phone_number')";
 
     // Execute the SQL query using the database connection
     if ($conn->query($sql) === TRUE) {

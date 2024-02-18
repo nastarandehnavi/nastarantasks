@@ -31,9 +31,9 @@
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
                     <td><a href='updatesingle.php?Id=$row[Id]' style = 'color: black;'>$row[Id]</a></td>
-                    <td><a href='updatesingle.php?first_name=$row[first_name]' style = 'color: black;'>$row[first_name]</a></td>
-                    <td><a href='updatesingle.php?last_name=$row[last_name]' style = 'color: black;'>$row[last_name]</a></td>
-                    <td><a href='updatesingle.php?city=$row[city]' style = 'color: black;'>$row[city]</a></td>
+                    <td>{$row['first_name']}</td>
+                    <td>{$row['last_name']}</td>
+                    <td>{$row['city']}</td>
                     
                   </tr>";
         }

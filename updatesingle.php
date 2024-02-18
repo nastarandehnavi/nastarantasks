@@ -69,4 +69,4 @@ if (isset($_POST['submit'])){
 $conn->close();
 
 ?>
-  <?  include footer.php ?>
+  <?php include 'footer.php' ?>

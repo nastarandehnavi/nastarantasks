@@ -9,14 +9,16 @@ if (isset($_POST['submit'])) {
     $first_name = $_POST['first_name'];     // First name
     $last_name = $_POST['last_name'];     // Last name
     $city = $_POST['city'];       // City
+    $Email = $_POST['Email'];     // First name
+    $phone_number = $_POST['phone_number'];     // First name
    
 
     // Include the database connection file
     include 'nd.php';
 
     // Define an SQL query to insert data into the 'customers' table
-    $sql = "INSERT INTO customers (first_name, last_name, city)
-            VALUES ('$first_name', '$last_name', '$city')";
+    $sql = "INSERT INTO customers (first_name, last_name, city, email, phone_number)
+            VALUES ('$first_name', '$last_name', '$city , $email, $phone_number')";
 
     // Execute the SQL query using the database connection
     if ($conn->query($sql) === TRUE) {

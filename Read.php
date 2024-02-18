@@ -22,6 +22,8 @@
                         <th>first_name</th>
                         <th>last_name</th>
                         <th>city</th>
+                        <th>Email</th>
+                        <th>phone_number</th>
                 
                     </tr>
                 </thead>
@@ -34,6 +36,8 @@
                     <td>{$row['first_name']}</td>
                     <td>{$row['last_name']}</td>
                     <td>{$row['city']}</td>
+                    <td>{$row['Email']}</td>
+                    <td>{$row['phone_number']}</td>
                     
                   </tr>";
         }

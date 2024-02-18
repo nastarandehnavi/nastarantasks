@@ -8,8 +8,8 @@ include 'header.php' ?>
 
          <form method="post" action="process5.php">
             <div class="form-group">
-                <label for="ID">ID:</label>
-                <input type="number" class="form-control" ID="ID" name="ID" required>
+                <label for="Id">Id:</label>
+                <input type="number" class="form-control" Id="Id" name="Id" required>
             </div>
             <div class="form-group">
                 <label for="first_name">First Name:</label>
@@ -22,6 +22,18 @@ include 'header.php' ?>
             <div class="form-group">
                 <label for="city">City:</label>
                 <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+
+            /div>
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="text" class="form-control" id="Email" name="Email" required>
+            </div>
+
+            /div>
+            <div class="form-group">
+                <label for="phone_number">phone_number:</label>
+                <input type="text" class="form-control" id="phone_number" name="phone_number" required>
             </div>
             
             

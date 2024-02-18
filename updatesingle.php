@@ -28,6 +28,13 @@ $row= mysqli_fetch_array($result);
     <div class="col">
       <input type="text" class="form-control" placeholder="city" name="city" required value="<?php echo $row['city']; ?>">
     </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Email" name="Email" required value="<?php echo $row['Email']; ?>">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="phone_number" name="phone_number" required value="<?php echo $row['phone_number']; ?>">
+    </div>
+    
 
     
 <br>
@@ -49,7 +56,11 @@ if (isset($_POST['submit'])){
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $city = $_POST['city'];
-    $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name' where Id='$a'");
+    $city = $_POST['Email'];
+    $city = $_POST['phone_number'];
+
+
+    $query = mysqli_query($conn,"UPDATE customers set first_name='$first_name', last_name='$last_name', city='$city', Email='$Email',phone_number='$phone_number',where Id='$a'");
     if($query){
         echo "<h2>Your information is updated Successfully</h2>";
         // if you want to redirect to update page after updating
